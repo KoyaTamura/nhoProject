@@ -38,11 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 9
   m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 9
+    serializedVersion: 8
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
@@ -87,7 +87,7 @@ LightmapSettings:
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_ShadowMaskMode: 2
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -125,7 +125,6 @@ GameObject:
   - component: {fileID: 191558461}
   - component: {fileID: 191558460}
   - component: {fileID: 191558459}
-  - component: {fileID: 191558464}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -199,28 +198,11 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 964879859}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &191558464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 191558458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90c92085f7ce44eb69f57da5c7e5b741, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  axes: 0
-  sensitivityX: 15
-  sensitivityY: 15
-  minimumX: -360
-  maximumX: 360
-  minimumY: -60
-  maximumY: 60
 --- !u!1 &939827033
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,7 +230,6 @@ VideoPlayer:
   m_TargetCameraAlpha: 1
   m_TargetCamera: {fileID: 0}
   m_TargetTexture: {fileID: 0}
-  m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 168139871}
   m_TargetMaterialProperty: _MainTex
   m_RenderMode: 3
@@ -260,7 +241,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: file:///Users/tamuchuchu/Desktop/4class/research/360/stMov/R0010374_er.MP4
+  m_Url: file://E:/tamura/Movie/R0010059_er.MP4
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -346,7 +327,7 @@ Canvas:
   m_GameObject: {fileID: 964879855}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 2
   m_Camera: {fileID: 191558462}
   m_PlaneDistance: 0.1
   m_PixelPerfect: 0
@@ -364,19 +345,19 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 964879855}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.47}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1792338844}
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 191558463}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 512, y: 384}
+  m_SizeDelta: {x: 1024, y: 768}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &964879860
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -384,7 +365,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 964879855}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -415,7 +396,6 @@ VideoPlayer:
   m_TargetCameraAlpha: 1
   m_TargetCamera: {fileID: 0}
   m_TargetTexture: {fileID: 0}
-  m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 168139871}
   m_TargetMaterialProperty: _MainTex
   m_RenderMode: 3
@@ -427,7 +407,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: file:///Users/tamuchuchu/Desktop/4class/research/360/stMov/R0010376_er.MP4
+  m_Url: file://E:/tamura/Movie/R0010060_er.MP4
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -624,7 +604,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1591762719
 GameObject:
@@ -653,7 +633,6 @@ VideoPlayer:
   m_TargetCameraAlpha: 1
   m_TargetCamera: {fileID: 0}
   m_TargetTexture: {fileID: 0}
-  m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 168139871}
   m_TargetMaterialProperty: _MainTex
   m_RenderMode: 3
@@ -665,7 +644,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: file:///Users/tamuchuchu/Desktop/4class/research/360/stMov/R0010373_er.MP4
+  m_Url: file://E:/tamura/Movie/R0010058_er.MP4
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -712,15 +691,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b7350828188e64e0ea5c2acae46df939, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b7350828188e64e0ea5c2acae46df939, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b7350828188e64e0ea5c2acae46df939, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b7350828188e64e0ea5c2acae46df939, type: 3}
       propertyPath: m_RootOrder
@@ -737,6 +716,10 @@ Prefab:
     - target: {fileID: 400000, guid: b7350828188e64e0ea5c2acae46df939, type: 3}
       propertyPath: m_LocalScale.z
       value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b7350828188e64e0ea5c2acae46df939, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7350828188e64e0ea5c2acae46df939, type: 3}

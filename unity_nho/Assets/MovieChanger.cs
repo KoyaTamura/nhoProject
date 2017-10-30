@@ -105,6 +105,7 @@ public class MovieChanger : MonoBehaviour {
 		DOTween.To (() => fadeout.alpha , (x) =>fadeout.alpha = x ,1.0f,1.0f).SetEase(Ease.InCubic);
 		yield return new WaitForSeconds (1.0f);
 		videoStopAndStart (nowPlayVideo);
+        yield return new WaitForSeconds(1.0f);
 		DOTween.To (() => fadeout.alpha , (x) =>fadeout.alpha = x ,0.0f,1.0f).SetEase(Ease.InCubic);
 	}
 }
