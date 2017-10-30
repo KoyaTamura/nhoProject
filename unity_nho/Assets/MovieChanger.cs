@@ -92,7 +92,7 @@ public class MovieChanger : MonoBehaviour {
 
 	//スタートのコルーチン
 	private IEnumerator StartText(){
-		yield return new WaitForSeconds (2f);
+		yield return new WaitForSeconds (4f);
 		DOTween.To (() => textCanvas.alpha, (x) => textCanvas.alpha = x, 0.0f, 3.0f).SetEase(Ease.InCubic);
 		DOTween.To (() => fadeout.alpha , (x) =>fadeout.alpha = x ,1.0f,1.0f).SetEase(Ease.InCubic);
 		yield return new WaitForSeconds (3f);
